@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-const roles = ['Full-Stack Developer', 'React & Next.js Expert', 'Mobile App Builder', 'UI/UX Enthusiast']
+const roles = ['Frontend Development',  'Backend Development','Full-stack Development']
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
