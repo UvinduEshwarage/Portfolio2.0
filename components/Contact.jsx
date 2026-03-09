@@ -113,7 +113,6 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
                     className="w-full bg-surface border border-border px-4 py-3 font-body text-sm text-text placeholder-muted/40 focus:outline-none focus:border-accent transition-colors duration-200"
                   />
                 </div>
@@ -125,7 +124,6 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
                     className="w-full bg-surface border border-border px-4 py-3 font-body text-sm text-text placeholder-muted/40 focus:outline-none focus:border-accent transition-colors duration-200"
                   />
                 </div>
@@ -137,7 +135,6 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Tell me ..."
                     className="w-full bg-surface border border-border px-4 py-3 font-body text-sm text-text placeholder-muted/40 focus:outline-none focus:border-accent transition-colors duration-200 resize-none"
                   />
                 </div>
