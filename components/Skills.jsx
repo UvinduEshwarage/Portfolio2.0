@@ -6,6 +6,8 @@ const skillGroups = [
       { name: 'TypeScript', icon: 'TS', color: '#3178C6' },
       { name: 'Python', icon: '🐍', color: '#3776AB' },
       { name: 'SQL', icon: '{}', color: '#e8ff47' },
+      { name: 'Node.js', icon: '⬡', color: '#339933' },
+
     ],
   },
   {
@@ -13,9 +15,8 @@ const skillGroups = [
     skills: [
       { name: 'React', icon: '⚛', color: '#61DAFB' },
       { name: 'Next.js', icon: '▲', color: '#ffffff' },
-      { name: 'Node.js', icon: '⬡', color: '#339933' },
       { name: 'Express', icon: '—', color: '#999' },
-      { name: 'Tailwind', icon: '≋', color: '#38BDF8' },
+      { name: 'Tailwind CSS', icon: '≋', color: '#38BDF8' },
     ],
   },
   {
