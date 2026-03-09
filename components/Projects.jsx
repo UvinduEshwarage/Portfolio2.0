@@ -9,7 +9,7 @@ const projects = [
     tech: ['React', 'Next.js', 'Mongodb', 'Tailwind'],
     category: 'Full-Stack',
     github: ' https://github.com/thethilina/LOLify.git',
-    demo: '#',
+    demo: 'https://lolify.vercel.app/',
     behance: '#',
     year: '2025',
     highlight: true,
