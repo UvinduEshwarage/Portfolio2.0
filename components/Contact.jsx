@@ -1,10 +1,16 @@
 'use client'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { useEffect } from 'react'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
+
+  useEffect(() => {
+  emailjs.init('IWd-dvHkS2qAb3ZII')
+}, [])
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -12,18 +18,20 @@ export default function Contact() {
     e.preventDefault()
     setSending(true)
     try {
+
     await emailjs.send(
-      'service_18jaeqn',    // from EmailJS dashboard
-      'template_kz9gv4n',   // from EmailJS dashboard
-      {
-        from_name: form.name,
-        from_email: form.email,
-        message: form.message,
-      },
-      'IWd-dvHkS2qAb3ZII'     // from EmailJS dashboard
-    )
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  {
+    from_name: form.name,
+    from_email: form.email,
+    message: form.message,
+  },
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+)
     setSent(true)
   } catch (err) {
+    console.error("EmailJs Error",err)
     alert('Something went wrong. Please email me directly.')
   } finally {
     setSending(false)
